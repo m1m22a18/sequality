@@ -10,5 +10,23 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        Calculate cal = new Calculate();
+        int n, m;
+        int sum;
+        double ave = 0;
+        n = 2;
+        m = 3;
+        sum = cal.sum(n, m);
+        ave = cal.average(sum, 2);
+        System.out.printf("Sum of %d and %d is %d.", n, m, sum);
+        System.out.printf("Average is %.1f.\n", ave);
+        n = 1;
+        m = 10;
+        sum = cal.sums(n, m);
+        ave = cal.average(sum, 10);
+        System.out.printf("Sum of %d to %d is %d.", n, m, sum);
+        System.out.printf("Average is %.1f.\n", ave);
+        System.out.printf("Sum of odd of %d to %d is %d.", n, m, cal.sumsOdd(n, m));
+        System.out.printf("Sum of even is %d.\n", cal.sumsEven(n, m));
     }
 }
